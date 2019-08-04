@@ -1,3 +1,74 @@
-<p>
-  email-list works!
-</p>
+<br>
+&nbsp;<button class="btn button1" (click)="addpopup()" >Add new Email &nbsp;<i class="fa fa-plus"></i></button>
+<br>
+<br>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Serial No.</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let email of emails" >
+      <td>{{email.idtableEmail}}</td>
+      <td>{{email.tableEmailEmailAddress}}</td>
+      <td>
+        <button class="btn button2" (click)="updatePopup(email.idtableEmail)"><i class="fa fa-edit"> Edit</i></button>
+&nbsp;
+        <button class="btn button2" (click)="deleteEmail(email.idtableEmail)"><i class="fa fa-trash"> Delete</i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  
+<div class="modal fade" id="myModal1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+     
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form  [formGroup]="addForm" (ngSubmit)="addEmail()">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input class="form-control" type="email" formControlName="email">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+   
+<div class="modal fade" id="myModal2">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+     
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form  [formGroup]="updateForm" (ngSubmit)="updateEmail()">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input class="form-control" type="email" formControlName="email">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>

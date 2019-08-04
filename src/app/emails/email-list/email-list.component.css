@@ -1,0 +1,28 @@
+.button2 {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .button2:hover {
+    background-color: RoyalBlue;
+  }
+  .button1 {
+    background-color:rgb(48, 163, 54) ;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+  }
+  .button1:hover {
+    background-color: rgb(5, 114, 11);
+  }
